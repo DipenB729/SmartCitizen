@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartCitizen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eaf45d3cd6dd2e83a7499d87520277e749da9836")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartCitizen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartCitizen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

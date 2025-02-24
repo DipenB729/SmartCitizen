@@ -1,0 +1,43 @@
+﻿@model IEnumerable<SmartCitizen.Models.Complaint>
+
+@{
+    ViewData["Title"] = "Complaints";
+}
+
+<h2>My Complaints</h2>
+
+<a asp-action="Create" class="btn btn-primary">New Complaint</a>
+
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Location</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ImagePath))
+                    {
+                        <img src="@item.ImagePath" alt="Complaint Image" class="img-thumbnail" style="max-width: 100px;" />
+                    }
+                </td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td>@item.Location</td>
+                <td>@item.Status</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

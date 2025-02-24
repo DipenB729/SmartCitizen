@@ -11,6 +11,9 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using SmartCitizen.Models;
+using System.Data;
+using Google.Apis.Admin.Directory.directory_v1.Data;
 
 namespace SmartCitizen.Areas.Identity.Pages.Account
 {
@@ -85,6 +88,17 @@ namespace SmartCitizen.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
+                    var user = await _userManager.FindByEmailAsync(Input.Email); // Get logged-in user
+                    var roles = await _userManager.GetRolesAsync(user); // Fetch roles
+
+                    if (roles.Contains(SD.Role_Admin))
+                    {
+                        return RedirectToAction("Index", "Home", new { area = "Admin" }); // Redirect to Admin Dashboard
+                    }
+                    else if (roles.Contains(SD.Role_PublicUser))
+                    {
+                        return RedirectToAction("Index", "Home", new { area = "User" }); // Redirect to User Dashboard
+                    }
                     return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)

@@ -1,0 +1,49 @@
+﻿@model SmartCitizen.Models.Complaint
+
+@{
+    ViewData["Title"] = "Edit Complaint";
+}
+
+<h2>Edit Complaint</h2>
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" required />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <textarea asp-for="Description" class="form-control" required></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Location">Location</label>
+        <input asp-for="Location" id="locationInput" class="form-control" required />
+        <button type="button" class="btn btn-secondary mt-2" onclick="getLocation()">Use My Location</button>
+    </div>
+    <div class="form-group">
+        <label>Current Image:</label><br>
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <img src="@Model.ImagePath" alt="Complaint Image" class="img-thumbnail" style="max-width: 200px;" />
+        }
+    </div>
+    <div class="form-group">
+        <label>Upload New Image</label>
+        <input type="file" name="imageFile" class="form-control" accept="image/*" />
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                document.getElementById("locationInput").value =
+                    position.coords.latitude + ", " + position.coords.longitude;
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+</script>
