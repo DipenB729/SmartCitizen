@@ -1,126 +1,130 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using SmartCitizen.Data;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using SmartCitizen.Models;
+
+using SmartCitizen.Data;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace SmartCitizen.Areas.User.Controllers
 {
     [Area("User")]
-    [Authorize]
+    [Authorize(Roles = SD.Role_PublicUser)]
     public class ComplaintController : Controller
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly UserManager<IdentityUser> _userManager; // Inject UserManager
 
-        public ComplaintController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment)
+
+        public ComplaintController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment, UserManager<IdentityUser> userManager)
         {
             _context = context;
             _webHostEnvironment = webHostEnvironment;
+            _userManager = userManager;
         }
 
-        // GET: User/Complaint
         public IActionResult Index()
         {
-            var complaints = _context.Complaints.ToList();
+            List<Complaint> complaints = _context.Complaints.ToList();
             return View(complaints);
         }
 
-        // GET: User/Complaint/Create
-        public IActionResult Create()
+        public IActionResult Upsert(int? id)
         {
-            return View();
+            Complaint complaint = new();
+            if (id == null || id == 0)
+            {
+                return View(complaint);
+            }
+            else
+            {
+                complaint = _context.Complaints.Find(id);
+                return View(complaint);
+            }
         }
 
-        // POST: User/Complaint/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Complaint complaint, IFormFile ?imageFile)
+        public IActionResult Upsert(Complaint complaint, IFormFile? file)
         {
+            string userId = _userManager.GetUserId(User);
+            if (string.IsNullOrEmpty(userId))
+            {
+                return Unauthorized(); // If UserId is null, return Unauthorized response
+            }
+
+            // Assign UserId to the complaint before validation
+            complaint.UserId = userId;
             if (ModelState.IsValid)
             {
-                if (imageFile != null)
+                string wwwRootPath = _webHostEnvironment.WebRootPath;
+                if (file != null)
                 {
-                    string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
-                    string filePath = Path.Combine(uploadDir, uniqueFileName);
-
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    string fileName = Guid.NewGuid().ToString() + Path.GetExtension(file.FileName);
+                    string complaintPath = Path.Combine(wwwRootPath, "images/complaint");
+                    if (!string.IsNullOrEmpty(complaint.ImagePath))
                     {
-                        await imageFile.CopyToAsync(fileStream);
+                        var oldImagePath = Path.Combine(wwwRootPath, complaint.ImagePath.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
                     }
 
-                    complaint.ImagePath = "/uploads/" + uniqueFileName;
-                }
-
-                _context.Complaints.Add(complaint);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            return View(complaint);
-        }
-
-        // GET: User/Complaint/Edit/5
-        public async Task<IActionResult> Edit(int id)
-        {
-            var complaint = await _context.Complaints.FindAsync(id);
-            if (complaint == null) return NotFound();
-            return View(complaint);
-        }
-
-        // POST: User/Complaint/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Complaint complaint, IFormFile imageFile)
-        {
-            if (id != complaint.Id) return NotFound();
-
-            if (ModelState.IsValid)
-            {
-                if (imageFile != null)
-                {
-                    string uploadDir = Path.Combine(_webHostEnvironment.WebRootPath, "uploads");
-                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + imageFile.FileName;
-                    string filePath = Path.Combine(uploadDir, uniqueFileName);
-
-                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    using (var fileStream = new FileStream(Path.Combine(complaintPath, fileName), FileMode.Create))
                     {
-                        await imageFile.CopyToAsync(fileStream);
+                        file.CopyTo(fileStream);
                     }
-
-                    complaint.ImagePath = "/uploads/" + uniqueFileName;
+                    complaint.ImagePath = "images/complaints/" + fileName;
                 }
 
-                _context.Complaints.Update(complaint);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (complaint.Id == 0)
+                {
+                    _context.Complaints.Add(complaint);
+                }
+                else
+                {
+                    _context.Complaints.Update(complaint);
+                }
+
+                _context.SaveChanges();
+                TempData["success"] = "Complaint submitted successfully";
+                return RedirectToAction("Index");
             }
-            return View(complaint);
-        }
-        public async Task<IActionResult> Delete(int id)
-        {
-            var complaint = await _context.Complaints.FindAsync(id);
-            if (complaint == null) return NotFound();
             return View(complaint);
         }
 
-        // POST: User/Complaint/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
         {
-            var complaint = await _context.Complaints.FindAsync(id);
-            if (complaint != null)
-            {
-                _context.Complaints.Remove(complaint);
-                await _context.SaveChangesAsync();
-            }
-            return RedirectToAction(nameof(Index));
+            List<Complaint> complaints = _context.Complaints.ToList();
+            return Json(new { data = complaints });
         }
+
+        [HttpDelete]
+        public IActionResult Delete(int? id)
+        {
+            var complaintToDelete = _context.Complaints.Find(id);
+            if (complaintToDelete == null)
+            {
+                return Json(new { success = false, message = "Error while deleting" });
+            }
+
+            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, complaintToDelete.ImagePath?.TrimStart('\\'));
+            if (!string.IsNullOrEmpty(complaintToDelete.ImagePath) && System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+
+            _context.Complaints.Remove(complaintToDelete);
+            _context.SaveChanges();
+            return Json(new { success = true, message = "Deleted successfully" });
+        }
+        #endregion
     }
 }

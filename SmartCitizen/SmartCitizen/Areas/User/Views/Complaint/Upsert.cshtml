@@ -1,0 +1,42 @@
+﻿@model SmartCitizen.Models.Complaint
+
+@{
+    ViewData["Title"] = Model.Id == 0 ? "Create Complaint" : "Edit Complaint";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" enctype="multipart/form-data">
+    <input asp-for="Id" type="hidden" />
+
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label"></label>
+        <input asp-for="Title" class="form-control" required />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea asp-for="Description" class="form-control" rows="3" required></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Location" class="form-label"></label>
+        <input asp-for="Location" class="form-control" required />
+        <span asp-validation-for="Location" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImagePath" class="form-label">Upload Image</label>
+        <input type="file" name="file" class="form-control" />
+        @if (!string.IsNullOrEmpty(Model.ImagePath))
+        {
+            <p>Current Image:</p>
+            <img src="~/@Model.ImagePath" alt="Complaint Image" class="img-thumbnail" width="150" />
+        }
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

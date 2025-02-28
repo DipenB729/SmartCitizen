@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Identity;
 
 namespace SmartCitizen.Models
 {
@@ -18,9 +20,11 @@ namespace SmartCitizen.Models
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
 
-        public string ?UserId { get; set; } // Foreign key to Identity User
+        public string UserId { get; set; } // Foreign key to Identity User
+        [ForeignKey("UserId")]
+        public IdentityUser ?User { get; set; } // Navigation property to ApplicationUser
 
-        public string ImagePath { get; set; } // Stores image file path
+        public string? ImagePath { get; set; } // Stores image file path
 
         public string Location { get; set; } // Stores the location of the complaint
     }

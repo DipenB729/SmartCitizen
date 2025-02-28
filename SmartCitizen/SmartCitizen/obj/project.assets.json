@@ -8643,11 +8643,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\6th sem\\SmartCitizen\\SmartCitizen\\SmartCitizen\\SmartCitizen.csproj",
+      "projectUniqueName": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\SmartCitizen.csproj",
       "projectName": "SmartCitizen",
-      "projectPath": "E:\\6th sem\\SmartCitizen\\SmartCitizen\\SmartCitizen\\SmartCitizen.csproj",
+      "projectPath": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\SmartCitizen.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "E:\\6th sem\\SmartCitizen\\SmartCitizen\\SmartCitizen\\obj\\",
+      "outputPath": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

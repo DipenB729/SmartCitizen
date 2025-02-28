@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\uploads\**" />
+    <Content Remove="wwwroot\uploads\**" />
+    <EmbeddedResource Remove="wwwroot\uploads\**" />
+    <None Remove="wwwroot\uploads\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Apis.Admin.Directory.directory_v1" Version="1.68.0.3631" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.0" />
@@ -23,7 +30,7 @@
 
   <ItemGroup>
     <Folder Include="Areas\Servicer\Controllers\" />
-    <Folder Include="wwwroot\uploads\" />
+    <Folder Include="wwwroot\images\complaint\" />
   </ItemGroup>
 
 </Project>
