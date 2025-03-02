@@ -1,0 +1,67 @@
+﻿@model SmartCitizen.Models.Complaint
+
+@{
+    ViewData["Title"] = "Complaint Details";
+}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">SmartCitizen</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Contact", "Home")">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary mb-4">@ViewData["Title"]</h2>
+    <div class="card shadow-lg border-0">
+        <div class="card-body">
+            <h5 class="card-title text-dark font-weight-bold">@Model.Title</h5>
+
+            <p class="card-text">
+                <strong>Description:</strong> @Model.Description
+            </p>
+            <p class="card-text">
+                <strong>Status:</strong>
+                <span class="badge >@Model.Status</span>
+            </p>
+            <p class="card-text">
+                <strong>Date Submitted:</strong> @Model.CreatedAt.ToString("MMMM dd, yyyy")
+            </p>
+
+            @if (!string.IsNullOrEmpty(Model.ImagePath))
+            {
+                <div class="mb-3">
+                    <img src="@Model.ImagePath" class="img-fluid rounded shadow" alt="Complaint Image" />
+                </div>
+            }
+
+            <a asp-action="Index" class="btn btn-outline-primary btn-lg">Back to List</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function GetStatusClass(status) {
+            switch (status.toLowerCase()) {
+                case 'resolved':
+                    return 'bg-success text-white';
+                case 'in-progress':
+                    return 'bg-warning text-dark';
+                case 'pending':
+                    return 'bg-danger text-white';
+                default:
+                    return 'bg-secondary text-white';
+            }
+        }
+    </script>
+}

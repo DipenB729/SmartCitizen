@@ -8353,8 +8353,20 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\wwwroot\\images\\complaint\\6fd2d2a1-5a66-47f9-8455-dce82ba926b7.png",
-      "PackagePath": "staticwebassets\\images\\complaint\\6fd2d2a1-5a66-47f9-8455-dce82ba926b7.png"
+      "Id": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\wwwroot\\images\\complaint\\1c5c65e5-c898-4fc1-9dc1-e068a121a140.jpg",
+      "PackagePath": "staticwebassets\\images\\complaint\\1c5c65e5-c898-4fc1-9dc1-e068a121a140.jpg"
+    },
+    {
+      "Id": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\wwwroot\\images\\complaint\\4b5cc562-1c1e-44f7-89fe-831297b78470.jpg",
+      "PackagePath": "staticwebassets\\images\\complaint\\4b5cc562-1c1e-44f7-89fe-831297b78470.jpg"
+    },
+    {
+      "Id": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\wwwroot\\images\\complaint\\d0089443-5f52-4271-986c-8945639d362c.jpg",
+      "PackagePath": "staticwebassets\\images\\complaint\\d0089443-5f52-4271-986c-8945639d362c.jpg"
+    },
+    {
+      "Id": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\wwwroot\\images\\complaint\\e8726452-5fa2-42f0-bea3-d3901c443bd8.png",
+      "PackagePath": "staticwebassets\\images\\complaint\\e8726452-5fa2-42f0-bea3-d3901c443bd8.png"
     },
     {
       "Id": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\wwwroot\\js\\site.js",

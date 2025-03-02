@@ -1,42 +1,91 @@
-﻿@model SmartCitizen.Models.Complaint
+﻿@using Microsoft.AspNetCore.Identity
+@model SmartCitizen.Models.Complaint
+@inject UserManager<IdentityUser> _userManager
 
 @{
     ViewData["Title"] = Model.Id == 0 ? "Create Complaint" : "Edit Complaint";
+    string userId = _userManager.GetUserId(User);
 }
 
-<h2>@ViewData["Title"]</h2>
-
-<form method="post" enctype="multipart/form-data">
-    <input asp-for="Id" type="hidden" />
-
-    <div class="mb-3">
-        <label asp-for="Title" class="form-label"></label>
-        <input asp-for="Title" class="form-control" required />
-        <span asp-validation-for="Title" class="text-danger"></span>
+<!-- Home Link -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm mb-4">
+    <div class="container">
+        <a class="navbar-brand text-primary" href="/">Home</a>
     </div>
+</nav>
 
-    <div class="mb-3">
-        <label asp-for="Description" class="form-label"></label>
-        <textarea asp-for="Description" class="form-control" rows="3" required></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
+<!-- Complaint Form Card -->
+<div class="card shadow border-0 mt-4">
+    <div class="card-header bg-secondary bg-gradient py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">@ViewData["Title"]</h2>
+            </div>
+        </div>
     </div>
+    <div class="card-body p-4">
+        <form method="post" enctype="multipart/form-data" class="row">
+            <input asp-for="Id" type="hidden" />
+            <input asp-for="UserId" type="hidden" value="@userId" />
 
-    <div class="mb-3">
-        <label asp-for="Location" class="form-label"></label>
-        <input asp-for="Location" class="form-control" required />
-        <span asp-validation-for="Location" class="text-danger"></span>
+            <div class="col-12 col-md-8">
+                <div class="border p-3 mt-4 shadow-sm">
+
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Title" class="form-label"></label>
+                        <input asp-for="Title" class="form-control" required />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Description" class="form-label"></label>
+                        <textarea asp-for="Description" class="form-control" rows="3" required></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3 row p-1">
+                        <label asp-for="Location" class="form-label"></label>
+                        <input asp-for="Location" class="form-control" required />
+                        <span asp-validation-for="Location" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3 row p-1">
+                        <label asp-for="ImagePath" class="form-label">Upload Image</label>
+                        <input type="file" name="file" class="form-control" />
+                        @if (!string.IsNullOrEmpty(Model.ImagePath))
+                        {
+                            <p>Current Image:</p>
+                            <img src="@Model.ImagePath" alt="Complaint Image" class="img-thumbnail" width="150" />
+                        }
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6 col-md-3">
+                            <button type="submit" class="btn btn-primary form-control">
+                                @(Model.Id != 0 ? "Update" : "Create")
+                            </button>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <a asp-action="Index" class="btn btn-outline-primary border form-control">Back to List</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <div class="border p-2 mt-4 shadow-sm">
+                    <h5>Current Image Preview</h5>
+                    <img src="@Model.ImagePath" width="100%" style="border-radius: 5px; border: 1px solid #bbb9b9;" />
+                </div>
+            </div>
+
+        </form>
     </div>
+</div>
 
-    <div class="mb-3">
-        <label asp-for="ImagePath" class="form-label">Upload Image</label>
-        <input type="file" name="file" class="form-control" />
-        @if (!string.IsNullOrEmpty(Model.ImagePath))
-        {
-            <p>Current Image:</p>
-            <img src="~/@Model.ImagePath" alt="Complaint Image" class="img-thumbnail" width="150" />
-        }
-    </div>
-
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
-</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Identity;
 
+
 namespace SmartCitizen.Areas.User.Controllers
 {
     [Area("User")]
@@ -18,7 +19,8 @@ namespace SmartCitizen.Areas.User.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly UserManager<IdentityUser> _userManager; // Inject UserManager
+        private readonly UserManager<IdentityUser> _userManager;
+
 
 
         public ComplaintController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment, UserManager<IdentityUser> userManager)
@@ -26,15 +28,17 @@ namespace SmartCitizen.Areas.User.Controllers
             _context = context;
             _webHostEnvironment = webHostEnvironment;
             _userManager = userManager;
+          
         }
 
         public IActionResult Index()
         {
+           
             List<Complaint> complaints = _context.Complaints.ToList();
             return View(complaints);
         }
 
-        public IActionResult Upsert(int? id)
+        public IActionResult Upsert(int id)
         {
             Complaint complaint = new();
             if (id == null || id == 0)
@@ -79,7 +83,8 @@ namespace SmartCitizen.Areas.User.Controllers
                     {
                         file.CopyTo(fileStream);
                     }
-                    complaint.ImagePath = "images/complaints/" + fileName;
+                    complaint.ImagePath = @"\images\complaint\" + fileName;  // Add a leading slash
+
                 }
 
                 if (complaint.Id == 0)
@@ -93,11 +98,19 @@ namespace SmartCitizen.Areas.User.Controllers
 
                 _context.SaveChanges();
                 TempData["success"] = "Complaint submitted successfully";
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
             return View(complaint);
         }
-
+        public IActionResult Show(int id)
+        {
+            var complaint = _context.Complaints.Find(id);
+            if (complaint == null)
+            {
+                return NotFound();
+            }
+            return View(complaint);
+        }
         #region API CALLS
         [HttpGet]
         public IActionResult GetAll()
@@ -106,8 +119,10 @@ namespace SmartCitizen.Areas.User.Controllers
             return Json(new { data = complaints });
         }
 
-        [HttpDelete]
-        public IActionResult Delete(int? id)
+        // Prevent CSRF attacks
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(int id)
         {
             var complaintToDelete = _context.Complaints.Find(id);
             if (complaintToDelete == null)
@@ -115,16 +130,23 @@ namespace SmartCitizen.Areas.User.Controllers
                 return Json(new { success = false, message = "Error while deleting" });
             }
 
-            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, complaintToDelete.ImagePath?.TrimStart('\\'));
-            if (!string.IsNullOrEmpty(complaintToDelete.ImagePath) && System.IO.File.Exists(oldImagePath))
+            // Delete Image if Exists
+            if (!string.IsNullOrEmpty(complaintToDelete.ImagePath))
             {
-                System.IO.File.Delete(oldImagePath);
+                var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, complaintToDelete.ImagePath.TrimStart('\\'));
+                if (System.IO.File.Exists(oldImagePath))
+                {
+                    System.IO.File.Delete(oldImagePath);
+                }
             }
 
             _context.Complaints.Remove(complaintToDelete);
             _context.SaveChanges();
-            return Json(new { success = true, message = "Deleted successfully" });
+
+            // Redirect after deletion (if needed)
+            return RedirectToAction("Index"); // Redirect to index or another view after deletion
         }
+
         #endregion
     }
 }

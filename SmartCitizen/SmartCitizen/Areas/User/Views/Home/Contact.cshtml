@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Ward Officer Information";
+}
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">SmartCitizen</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Contact", "Home")">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("About", "Home")">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <h2 class="text-center">Ward Officer Information</h2>
+    <p class="lead text-center">Below are the details of the Ward Officers.</p>
+
+    <table class="table table-bordered table-striped mt-4">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Designation</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Sample Data: You can replace this with dynamic data from a model or database -->
+            <tr>
+                <td>John Doe</td>
+                <td>Ward Officer</td>
+                <td>+977 1 1234567</td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>Assistant Ward Officer</td>
+                <td>+977 1 2345678</td>
+            </tr>
+            <tr>
+                <td>Ashok Kumar</td>
+                <td>Senior Ward Officer</td>
+                <td>+977 1 3456789</td>
+            </tr>
+            <!-- End of sample data -->
+        </tbody>
+    </table>
+</div>

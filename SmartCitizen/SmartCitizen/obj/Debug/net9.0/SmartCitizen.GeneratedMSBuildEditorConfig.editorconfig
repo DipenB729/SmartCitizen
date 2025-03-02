@@ -212,20 +212,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcU2VydmljZXJcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Complaint/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDb21wbGFpbnRcRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Complaint/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDb21wbGFpbnRcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Complaint/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDb21wbGFpbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Complaint/Show.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDb21wbGFpbnRcU2hvdy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Complaint/Upsert.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xDb21wbGFpbnRcVXBzZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Home/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXEFib3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXENvbnRhY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/project/SmartCitizen/SmartCitizen/SmartCitizen/Areas/User/Views/Home/Index.cshtml]
