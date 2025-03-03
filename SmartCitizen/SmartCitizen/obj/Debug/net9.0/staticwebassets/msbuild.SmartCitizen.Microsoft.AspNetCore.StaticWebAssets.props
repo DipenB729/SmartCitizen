@@ -37584,6 +37584,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\1c5c65e5-c898-4fc1-9dc1-e068a121a140.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\7b885a74-e410-441e-a571-3aae47e3d937.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>SmartCitizen</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/SmartCitizen</BasePath>
+      <RelativePath>images/complaint/7b885a74-e410-441e-a571-3aae47e3d937.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gdibz0n14b</Fingerprint>
+      <Integrity>xOSReR3AdRwTtnmJUpSH/lwZ1mh7QAPvQp46+y1/kmU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\7b885a74-e410-441e-a571-3aae47e3d937.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\bdda003c-5820-4ab8-971e-fed4ae16e533.png'))">
       <SourceType>Package</SourceType>
       <SourceId>SmartCitizen</SourceId>

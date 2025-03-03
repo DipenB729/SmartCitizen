@@ -13,6 +13,8 @@ namespace SmartCitizen.Data
         }
         public DbSet<ApplicationUser>ApplicationUsers{get;set;}
         public DbSet<Complaint> Complaints { get; set; }
+        public DbSet<Comment> Comment { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
