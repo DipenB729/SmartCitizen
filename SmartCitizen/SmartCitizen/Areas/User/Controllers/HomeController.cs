@@ -24,7 +24,7 @@ public class HomeController : Controller
      // Ensure the role is checked for access
     public async Task<IActionResult> Index()
     {
-        List<Complaint> complaints = _context.Complaints.ToList();
+        List<Complaint> complaints = _context.Complaints.OrderByDescending(c => c.CreatedAt).ToList();
         return View(complaints); // Pass data to the view
     }
     public IActionResult AddComment(int id)

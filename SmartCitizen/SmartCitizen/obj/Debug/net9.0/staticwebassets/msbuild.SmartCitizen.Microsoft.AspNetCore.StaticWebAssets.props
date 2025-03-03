@@ -37566,48 +37566,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Frontend\plugins\uplot\uPlot.min.css'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\1c5c65e5-c898-4fc1-9dc1-e068a121a140.jpg'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\3f7ae42f-a086-4a1e-bca9-2840f12c0d92.png'))">
       <SourceType>Package</SourceType>
       <SourceId>SmartCitizen</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SmartCitizen</BasePath>
-      <RelativePath>images/complaint/1c5c65e5-c898-4fc1-9dc1-e068a121a140.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>k6lxcm6chg</Fingerprint>
-      <Integrity>fO3LgI1pV8wVwoXTAX1vXkor7q2EsWkaPXV36qkdQMU=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\1c5c65e5-c898-4fc1-9dc1-e068a121a140.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\7b885a74-e410-441e-a571-3aae47e3d937.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>SmartCitizen</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/SmartCitizen</BasePath>
-      <RelativePath>images/complaint/7b885a74-e410-441e-a571-3aae47e3d937.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gdibz0n14b</Fingerprint>
-      <Integrity>xOSReR3AdRwTtnmJUpSH/lwZ1mh7QAPvQp46+y1/kmU=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\7b885a74-e410-441e-a571-3aae47e3d937.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\bdda003c-5820-4ab8-971e-fed4ae16e533.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>SmartCitizen</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/SmartCitizen</BasePath>
-      <RelativePath>images/complaint/bdda003c-5820-4ab8-971e-fed4ae16e533.png</RelativePath>
+      <RelativePath>images/complaint/3f7ae42f-a086-4a1e-bca9-2840f12c0d92.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37618,14 +37582,14 @@
       <Integrity>1RdnvzocoMuL4+qhXNXTDapy08udiw22tCy+lm2MUo4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\bdda003c-5820-4ab8-971e-fed4ae16e533.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\3f7ae42f-a086-4a1e-bca9-2840f12c0d92.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\cbfcc06c-f17d-49a1-b41d-1ec598671246.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\98117f08-4f70-45f9-8884-915a1e1f2d6a.png'))">
       <SourceType>Package</SourceType>
       <SourceId>SmartCitizen</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/SmartCitizen</BasePath>
-      <RelativePath>images/complaint/cbfcc06c-f17d-49a1-b41d-1ec598671246.png</RelativePath>
+      <RelativePath>images/complaint/98117f08-4f70-45f9-8884-915a1e1f2d6a.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -37636,7 +37600,7 @@
       <Integrity>xOSReR3AdRwTtnmJUpSH/lwZ1mh7QAPvQp46+y1/kmU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\cbfcc06c-f17d-49a1-b41d-1ec598671246.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\98117f08-4f70-45f9-8884-915a1e1f2d6a.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\d0089443-5f52-4271-986c-8945639d362c.jpg'))">
       <SourceType>Package</SourceType>
@@ -37655,24 +37619,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\d0089443-5f52-4271-986c-8945639d362c.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\e8726452-5fa2-42f0-bea3-d3901c443bd8.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>SmartCitizen</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/SmartCitizen</BasePath>
-      <RelativePath>images/complaint/e8726452-5fa2-42f0-bea3-d3901c443bd8.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>gdibz0n14b</Fingerprint>
-      <Integrity>xOSReR3AdRwTtnmJUpSH/lwZ1mh7QAPvQp46+y1/kmU=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\complaint\e8726452-5fa2-42f0-bea3-d3901c443bd8.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))">
       <SourceType>Package</SourceType>

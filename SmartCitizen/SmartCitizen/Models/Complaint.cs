@@ -27,6 +27,6 @@ namespace SmartCitizen.Models
         public string? ImagePath { get; set; } // Stores image file path
 
         public string Location { get; set; } // Stores the location of the complaint
-        public ICollection<Comment> Comments { get; set; }
+        public ICollection<Comment> ?Comments { get; set; }
     }
 }
