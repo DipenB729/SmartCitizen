@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\project\\SmartCitizen\\SmartCitizen\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|f:\\project\\smartcitizen\\smartcitizen\\smartcitizen\\areas\\user\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|solutionrelative:smartcitizen\\areas\\user\\controllers\\complaintcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|f:\\project\\smartcitizen\\smartcitizen\\smartcitizen\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|solutionrelative:smartcitizen\\areas\\user\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|f:\\project\\smartcitizen\\smartcitizen\\smartcitizen\\areas\\user\\views\\complaint\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|solutionrelative:smartcitizen\\areas\\user\\views\\complaint\\upsert.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|f:\\project\\smartcitizen\\smartcitizen\\smartcitizen\\areas\\user\\views\\home\\addcomment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|solutionrelative:smartcitizen\\areas\\user\\views\\home\\addcomment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|f:\\project\\smartcitizen\\smartcitizen\\smartcitizen\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|solutionrelative:smartcitizen\\areas\\user\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|f:\\project\\smartcitizen\\smartcitizen\\smartcitizen\\areas\\user\\views\\complaint\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C75235A8-F01D-4EF7-8C6E-9DA48B257DFE}|SmartCitizen\\SmartCitizen.csproj|solutionrelative:smartcitizen\\areas\\user\\views\\complaint\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 281,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Upsert.cshtml",
+              "DocumentMoniker": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Complaint\\Upsert.cshtml",
+              "RelativeDocumentMoniker": "SmartCitizen\\Areas\\User\\Views\\Complaint\\Upsert.cshtml",
+              "ToolTip": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Complaint\\Upsert.cshtml",
+              "RelativeToolTip": "SmartCitizen\\Areas\\User\\Views\\Complaint\\Upsert.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T18:07:25.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ComplaintController.cs",
+              "DocumentMoniker": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Controllers\\ComplaintController.cs",
+              "RelativeDocumentMoniker": "SmartCitizen\\Areas\\User\\Controllers\\ComplaintController.cs",
+              "ToolTip": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Controllers\\ComplaintController.cs",
+              "RelativeToolTip": "SmartCitizen\\Areas\\User\\Controllers\\ComplaintController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:07:13.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SmartCitizen\\Areas\\User\\Controllers\\HomeController.cs",
+              "ToolTip": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SmartCitizen\\Areas\\User\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAmwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:06:24.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddComment.cshtml",
+              "DocumentMoniker": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Home\\AddComment.cshtml",
+              "RelativeDocumentMoniker": "SmartCitizen\\Areas\\User\\Views\\Home\\AddComment.cshtml",
+              "ToolTip": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Home\\AddComment.cshtml",
+              "RelativeToolTip": "SmartCitizen\\Areas\\User\\Views\\Home\\AddComment.cshtml",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAFkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T18:04:27.431Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Show.cshtml",
+              "DocumentMoniker": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Complaint\\Show.cshtml",
+              "RelativeDocumentMoniker": "SmartCitizen\\Areas\\User\\Views\\Complaint\\Show.cshtml",
+              "ToolTip": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Complaint\\Show.cshtml",
+              "RelativeToolTip": "SmartCitizen\\Areas\\User\\Views\\Complaint\\Show.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T17:54:35.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SmartCitizen\\Areas\\User\\Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\project\\SmartCitizen\\SmartCitizen\\SmartCitizen\\Areas\\User\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SmartCitizen\\Areas\\User\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-31T17:51:57.251Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 119,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
