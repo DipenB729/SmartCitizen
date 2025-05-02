@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Dashboard</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Frontend/plugins/fontawesome-free/css/all.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Tempusdominus Bootstrap 4 -->
+    <link rel="stylesheet" href="~/Frontend/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/Frontend/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <!-- JQVMap -->
+    <link rel="stylesheet" href="~/Frontend/plugins/jqvmap/jqvmap.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Frontend/dist/css/adminlte.min.css">
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/Frontend/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="~/Frontend/plugins/daterangepicker/daterangepicker.css">
+    <!-- Summernote -->
+    <link rel="stylesheet" href="~/Frontend/plugins/summernote/summernote-bs4.min.css">
+</head>
+<body>
+    
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+
+        <ul class="navbar-nav ml-auto d-flex align-items-center">
+            <li class="nav-item d-flex">
+                <partial name="_LoginPartial" />
+            </li>
+        </ul>        
+    </nav>
+        <div class="wrapper">
+            <!-- Content Wrapper -->
+            <div class="content-wrapper">
+                <div class="content-header">
+                    <div class="container-fluid">
+                        <div class="row mb-2"></div>
+                    </div>
+                </div>
+
+                <section class="content">
+                    <div class="container-fluid">
+                        @RenderBody()
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="main-footer">
+                <div class="float-right d-none d-sm-inline">Custom Footer Text</div>
+                <strong>Copyright &copy; 2025 <a href="#">Your Company</a>.</strong> All rights reserved.
+            </footer>
+
+        </div>
+    }
+    else
+    {
+        <!-- Non-admin full-width layout -->
+        <div class="container-fluid p-0">
+            @RenderBody()
+        </div>
+    }
+
+    <!-- Scripts -->
+    <script src="~/Frontend/plugins/jquery/jquery.min.js"></script>
+    <script src="~/Frontend/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Frontend/dist/js/adminlte.js"></script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
